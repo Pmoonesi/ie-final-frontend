@@ -33,7 +33,7 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
+
     height: calc(100% / 3 - 2 * var(--mg-m));
     color: white;
     text-align: center;
@@ -85,14 +85,39 @@ body{
     100% { opacity: 1; }
 }
 
-.lectures-div > div, .books-div > div, .footer-div > div{
-    background-color: var(--green);
+.lectures-div {
+    background:linear-gradient(0deg, rgba(105, 170, 255, 0.4), rgba(105, 170, 255, 0.4)), url("./assets/Background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .lectures-div > div {
     float: left;
     width: calc(100% / 4 - 2 * var(--mg-s));
     margin: var(--mg-s);
+    padding: var(--pd-s);
+    background-color: rgba(180, 225, 220, 0.755);
+
+    border-radius: var(--r);
+    box-sizing: border-box;
+    text-align: center;
+
+    transition: 500ms linear; 
+}
+
+.lectures-div > div:hover {
+    transform: scale(1.05);
+}
+
+.lectures-div > div > img {
+    max-height: 150px;
+    max-width: 80%;
+    opacity: 0.6;
+}
+
+.books-div > div, .footer-div > div{
+    background-color: var(--green);
 }
 
 .books-div > div {
