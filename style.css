@@ -2,10 +2,13 @@
     --blue: #1e90ff;
     --white: #ffffff;
     --green: #00ff00;
+    --pink: #ff0066;
     --mg-m: 20px;
     --mg-s: 10px;
+    --pd-l: 20px;
     --pd-m: 10px;
     --pd-s: 5px;
+    --r: 1rem;
 }
 
 body{
@@ -23,6 +26,63 @@ body{
     margin: var(--mg-m);
     padding: var(--pd-m) var(--pd-s);
     overflow: hidden;
+}
+
+.header-div {
+    background:linear-gradient(0deg, rgba(105, 170, 255, 0.4), rgba(105, 170, 255, 0.4)), url("./assets/Header.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    height: calc(100% / 3 - 2 * var(--mg-m));
+    color: white;
+    text-align: center;
+}
+
+.header-div > h1, .header-div > p {
+    animation-duration: 3s;
+    animation-name: slidein;
+    text-transform: uppercase;
+}
+
+.header-div > h1 {
+    letter-spacing: 1rem;
+}
+
+.header-div > button {
+    animation-duration: 5s;
+    animation-name: fadeIn;
+
+    background-color: white;
+    color: var(--pink);
+    padding: var(--pd-m) var(--pd-l);
+    text-transform: uppercase;
+    border: 1px white solid;
+    border-radius: var(--r);
+}
+
+.header-div > button:hover {
+    background-color: var(--pink);
+    border: 1px var(--pink) solid;
+    color: white;
+    cursor: pointer;
+}
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 100%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 .lectures-div > div, .books-div > div, .footer-div > div{
