@@ -1,0 +1,48 @@
+:root {
+    --blue: #1e90ff;
+    --white: #ffffff;
+    --green: #00ff00;
+    --mg-m: 20px;
+    --mg-s: 10px;
+    --pd-m: 10px;
+    --pd-s: 5px;
+}
+
+body{
+    background-color: #fff;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+.header-div, .lectures-div, .books-div, .footer-div{
+    background-color: var(--blue);
+    margin: var(--mg-m);
+    padding: var(--pd-m) var(--pd-s);
+    overflow: hidden;
+}
+
+.lectures-div > div, .books-div > div, .footer-div > div{
+    background-color: var(--green);
+}
+
+.lectures-div > div {
+    float: left;
+    width: calc(100% / 4 - 2 * var(--mg-s));
+    margin: var(--mg-s);
+}
+
+.books-div > div {
+    float: left;
+    width: calc(100% / 3 - 2 * var(--mg-s));
+    margin: var(--mg-s);
+}
+
+.footer-div > div {
+    float: left;
+    width: calc(100% / 2 - 2 * var(--mg-s));
+    margin: var(--mg-s);
+}
