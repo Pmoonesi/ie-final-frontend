@@ -200,7 +200,7 @@ body{
 }
 
 /* effect-shine */
-@-webkit-keyframes shine {
+/* @-webkit-keyframes shine {
     from {
         -webkit-mask-position: 150%;
     }
@@ -208,14 +208,45 @@ body{
     to {
         -webkit-mask-position: -50%;
     }
+} */
+
+.footer-div {
+    background-color: #333;
+    padding: calc(2 * var(--pd-l)) var(--pd-m);
 }
 
-.footer-div > div{
-    background-color: var(--green);
-}
-
-.footer-div > div {
+.footer-links, .footer-about {
     float: left;
     width: calc(100% / 2 - 2 * var(--mg-s));
     margin: var(--mg-s);
+
+    color: var(--gray-1);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: small;
+
+}
+
+.footer-links > hr, .footer-about > hr {
+    width: 90%;
+    height: 0;
+    color: var(--gray-3);
+    background-color: var(--gray-3);
+    border: 1px solid rgba(0,0,0,.6);
+}
+
+.footer-links > a {
+    display: inline-block;
+    padding: var(--pd-s);
+    color: var(--gray-1);
+    text-decoration: none;
+}
+
+.footer-links > a:hover {
+    color: var(--pink);
+    cursor: pointer;
+}
+
+.footer-about > p{
+    margin: 0;
 }
