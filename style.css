@@ -3,6 +3,9 @@
     --white: #ffffff;
     --green: #00ff00;
     --pink: #ff0066;
+    --gray-1: #eee;
+    --gray-2: #ddd;
+    --gray-3: #ccc;
     --mg-m: 20px;
     --mg-s: 10px;
     --pd-l: 20px;
@@ -22,7 +25,6 @@ body{
 }
 
 .header-div, .lectures-div, .books-div, .footer-div{
-    background-color: var(--blue);
     margin: var(--mg-m);
     padding: var(--pd-m) var(--pd-s);
     overflow: hidden;
@@ -52,19 +54,20 @@ body{
 .header-div > button {
     animation-duration: 5s;
     animation-name: fadeIn;
+}
 
-    background-color: white;
+.bbutton {
+    background-color: var(--gray-2);
+    border: 1px var(--gray-3) solid;
     color: var(--pink);
     padding: var(--pd-m) var(--pd-l);
     text-transform: uppercase;
-    border: 1px white solid;
     border-radius: var(--r);
 }
 
-.header-div > button:hover {
+.bbutton:hover {
     background-color: var(--pink);
-    border: 1px var(--pink) solid;
-    color: white;
+    color: var(--gray-2);
     cursor: pointer;
 }
 
@@ -116,14 +119,99 @@ body{
     opacity: 0.6;
 }
 
-.books-div > div, .footer-div > div{
-    background-color: var(--green);
+.books-div {
+    text-align: center;
 }
 
-.books-div > div {
+.books-div > h2 {
+    font-weight: bolder;
+    background: -webkit-linear-gradient(#0004f7, #6170fb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.books-div > h2:hover {
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 1.5s infinite;
+    mask-image: none;
+    mask-size: none;
+}
+
+.book-card {
     float: left;
     width: calc(100% / 3 - 2 * var(--mg-s));
+    min-height: 400px;
     margin: var(--mg-s);
+    perspective: 1000px;
+    position: relative;
+}
+
+.book-card-inner {
+    width: 100%;
+    height: 100%;
+    max-width: 350px;
+    left: max(calc((100% - 350px) / 2), 0px);
+    transition: transform 0.3s;
+    transform-style: preserve-3d;
+    position: absolute;
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.2);
+}
+
+.book-card:hover .book-card-inner {
+    transform: rotateY( 180deg ) ;
+    transition: transform 0.3s;
+}
+
+.book-card-front, .book-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.book-card-back {
+    padding: 30% 0;
+    transform: rotateY( 180deg );
+}
+
+.book-card-front > img {
+    height: 200px;
+    width: 100%;
+    max-width: 350px;
+}
+
+.text-in-image {
+    position: absolute;
+    bottom: 200px;
+    right: 16px;
+}
+
+.text-in-image > h3 {
+    text-align: right;
+    padding: 2px 4px;
+    margin: 2px 0;
+    margin-left: auto;
+    background-color: rgba(10, 200, 10, 0.8);
+    color: #fff;
+    font-weight: 300;
+    width: fit-content;
+}
+
+/* effect-shine */
+@-webkit-keyframes shine {
+    from {
+        -webkit-mask-position: 150%;
+    }
+
+    to {
+        -webkit-mask-position: -50%;
+    }
+}
+
+.footer-div > div{
+    background-color: var(--green);
 }
 
 .footer-div > div {
