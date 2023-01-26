@@ -129,20 +129,19 @@ a {
     text-align: center;
 }
 
-.books-div > h2 {
-    font-weight: bolder;
-    background: -webkit-linear-gradient(#0004f7, #6170fb);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+.books-div > h1 {
+  margin: var(--mg-m) auto;
+  width: fit-content;
+  background: rgb(131,58,180);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(246,54,54,1) 85%, rgba(252,176,69,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: none;
+  transition: 500ms linear; 
 }
 
-.books-div > h2:hover {
-    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
-    -webkit-mask-size: 200%;
-    animation: shine 1.5s infinite;
-    mask-image: none;
-    mask-size: none;
+.books-div > h1:hover {
+  transform: scale(1.05);
 }
 
 .book-card {
@@ -203,16 +202,6 @@ a {
     color: #fff;
     font-weight: 300;
     width: fit-content;
-}
-
-/* effect-shine */
-@-webkit-keyframes shine {
-    from {
-        -webkit-mask-position: 150%;
-    }
-    to {
-        -webkit-mask-position: -50%;
-    }
 }
 
 .fade-in {
