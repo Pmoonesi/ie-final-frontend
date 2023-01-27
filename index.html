@@ -8,25 +8,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
   </head>
   <body>
-    <!-- The overlay -->
-    <div id="myNav" class="overlay">
-
-      <!-- Overlay content -->
-      <div id="nav-links" class="overlay-content">
-        <a href="#header">01 start</a>
-        <a href="#lectures">02 course lectures</a>
-        <a href="#books">03 related books</a>
-      </div>
-
-    </div>
-
     <!-- Use any element to open/show the overlay navigation menu -->
+    <input type="checkbox" id="check" /> 
     <label for="check" class="toggle-btn">
-      <input type="checkbox" id="check" /> 
       <span></span>
       <span></span>
       <span></span>
     </label>
+    
+    <!-- The overlay -->
+    
+    <div id="myNav" class="overlay">
+      <!-- Overlay content -->
+      <div id="nav-links" class="overlay-content">
+        <label for="check"><a href="./#header">01 start</a></label>
+        <label for="check"><a href="./#lectures">02 course lectures</a></label>
+        <label for="check"><a href="./#books">03 related books</a></label>
+      </div>
+
+    </div>
+
 
     <div id="header" class="header-div">
       <h1>internet</h1>

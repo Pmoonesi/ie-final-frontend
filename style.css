@@ -1,145 +1,168 @@
 :root {
-    --blue: #1e90ff;
-    --white: #ffffff;
-    --green: #00ff00;
-    --pink: #ff0066;
-    --gray-1: #eee;
-    --gray-2: #ddd;
-    --gray-3: #ccc;
-    --mg-m: 20px;
-    --mg-s: 10px;
-    --pd-l: 20px;
-    --pd-m: 10px;
-    --pd-s: 5px;
-    --r: 1rem;
-    --h: 350px;
-    --w: 250px;
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --green: #00ff00;
+  --pink: #ff0066;
+  --gray-1: #eee;
+  --gray-2: #ddd;
+  --gray-3: #ccc;
+  --mg-m: 20px;
+  --mg-s: 10px;
+  --pd-l: 20px;
+  --pd-m: 10px;
+  --pd-s: 5px;
+  --r: 1rem;
+  --h: 350px;
+  --w: 250px;
 }
 
-body{
-    background-color: #fff;
-    color: #000;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-.header-div, .lectures-div, .books-div, .footer-div{
-    margin: var(--mg-m);
-    padding: var(--pd-m) var(--pd-s);
-    overflow: hidden;
+.header-div,
+.lectures-div,
+.books-div,
+.footer-div {
+  margin: var(--mg-m);
+  padding: var(--pd-m) var(--pd-s);
+  overflow: hidden;
 }
 
 .header-div {
-    background:linear-gradient(0deg, rgba(105, 115, 255, 0.3), rgba(120, 75, 255, 0.5)), url("./assets/Header.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background: linear-gradient(
+      0deg,
+      rgba(105, 115, 255, 0.3),
+      rgba(120, 75, 255, 0.5)
+    ),
+    url("./assets/Header.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-    height: calc(100% / 3 - 2 * var(--mg-m));
-    color: white;
-    text-align: center;
-    padding: 24px;
+  height: calc(100% / 3 - 2 * var(--mg-m));
+  color: white;
+  text-align: center;
+  padding: 24px;
 }
 
-.header-div > h1, .header-div > p {
-    animation-duration: 3s;
-    animation-name: slidein;
-    text-transform: uppercase;
+.header-div > h1,
+.header-div > p {
+  animation-duration: 3s;
+  animation-name: slidein;
+  text-transform: uppercase;
 }
 
 .header-div > h1 {
-    letter-spacing: 1.5rem;
+  letter-spacing: 1.5rem;
 }
 
 .header-div > a {
-    animation-duration: 5s;
-    animation-name: fadeIn;
+  animation-duration: 5s;
+  animation-name: fadeIn;
 }
 
 .bbutton {
-    background-color: var(--gray-2);
-    border: 1px var(--gray-3) solid;
-    color: var(--pink);
-    padding: var(--pd-m) var(--pd-l);
-    text-transform: uppercase;
-    border-radius: var(--r);
+  background-color: var(--gray-2);
+  border: 1px var(--gray-3) solid;
+  color: var(--pink);
+  padding: var(--pd-m) var(--pd-l);
+  text-transform: uppercase;
+  border-radius: var(--r);
 }
 
 .bbutton:hover {
-    background-color: var(--pink);
-    color: var(--gray-2);
-    cursor: pointer;
+  background-color: var(--pink);
+  color: var(--gray-2);
+  cursor: pointer;
 }
 
 @keyframes slidein {
-    from {
-      margin-left: 100%;
-      width: 100%;
-    }
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
+  from {
+    margin-left: 100%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .lectures-div {
-    background:linear-gradient(0deg, rgba(105, 170, 255, 0.4), rgba(105, 170, 255, 0.4)), url("./assets/Background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background: linear-gradient(
+      0deg,
+      rgba(105, 170, 255, 0.4),
+      rgba(105, 170, 255, 0.4)
+    ),
+    url("./assets/Background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .lectures-div > div {
-    float: left;
-    width: calc(100% / 4 - 2 * var(--mg-s));
-    margin: var(--mg-s);
-    padding: var(--pd-s);
-    background-color: rgba(180, 225, 220, 0.755);
+  float: left;
+  width: calc(100% / 4 - 2 * var(--mg-s));
+  margin: var(--mg-s);
+  padding: var(--pd-s);
+  background-color: rgba(180, 225, 220, 0.755);
 
-    border-radius: var(--r);
-    box-sizing: border-box;
-    text-align: center;
+  border-radius: var(--r);
+  box-sizing: border-box;
+  text-align: center;
 
-    transition: 500ms linear; 
+  transition: 500ms linear;
 }
 
 .lectures-div > div:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .lectures-div > div > img {
-    max-height: 150px;
-    max-width: 80%;
-    opacity: 0.6;
+  max-height: 150px;
+  max-width: 80%;
+  opacity: 0.6;
 }
 
 .books-div {
-    text-align: center;
+  text-align: center;
 }
 
 .books-div > h1 {
   margin: var(--mg-m) auto;
   width: fit-content;
-  background: rgb(131,58,180);
-  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(246,54,54,1) 85%, rgba(252,176,69,1) 100%);
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(246, 54, 54, 1) 85%,
+    rgba(252, 176, 69, 1) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: none;
-  transition: 500ms linear; 
+  transition: 500ms linear;
 }
 
 .books-div > h1:hover {
@@ -147,10 +170,10 @@ a {
 }
 
 .book-container {
-    float: left;
-    width: calc(100% / 3 - 2 * var(--mg-s));
-    min-height: 400px;
-    margin: var(--mg-s);
+  float: left;
+  width: calc(100% / 3 - 2 * var(--mg-s));
+  min-height: 400px;
+  margin: var(--mg-s);
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -180,7 +203,8 @@ a {
 }
 
 /* Position the front and back side */
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -214,291 +238,297 @@ a {
 }
 
 .text-in-image {
-    position: absolute;
-    bottom: 200px;
-    right: 16px;
+  position: absolute;
+  bottom: 200px;
+  right: 16px;
 }
 
 .text-in-image > h3 {
-    text-align: right;
-    padding: 2px 4px;
-    margin: 2px 0;
-    margin-left: auto;
-    background-color: rgba(10, 200, 10, 0.8);
-    color: #fff;
-    font-weight: 300;
-    width: fit-content;
+  text-align: right;
+  padding: 2px 4px;
+  margin: 2px 0;
+  margin-left: auto;
+  background-color: rgba(10, 200, 10, 0.8);
+  color: #fff;
+  font-weight: 300;
+  width: fit-content;
 }
 
 .fade-in {
-	-webkit-animation: fade-in 0.5s ease-in both;
-	        animation: fade-in 0.5s ease-in both;
+  -webkit-animation: fade-in 0.5s ease-in both;
+  animation: fade-in 0.5s ease-in both;
 }
- @-webkit-keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
   }
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+  100% {
+    opacity: 1;
   }
-  .fade-out {
-	-webkit-animation: fade-out 0.5s ease-out both;
-	        animation: fade-out 0.5s ease-out both;
 }
- @-webkit-keyframes fade-out {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
+@keyframes fade-in {
+  0% {
+    opacity: 0;
   }
-  @keyframes fade-out {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
+  100% {
+    opacity: 1;
   }
+}
+.fade-out {
+  -webkit-animation: fade-out 0.5s ease-out both;
+  animation: fade-out 0.5s ease-out both;
+}
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
-  input[type="checkbox"] {
-    -webkit-animation: fade-out 0.5s ease-out both;
-    animation: fade-out 0.5s ease-out both;
-    display:none;
-  }
-  input[type="checkbox"]:checked ~ .modal,
-  input[type="checkbox"]:checked ~ .modal-background {
-    -webkit-animation: fade-in 0.5s ease-in both;
-    animation: fade-in 0.5s ease-in both;
-    display: block;
-  }
-  .modal-background {
-    width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.5);
-      position: fixed;
-      top: 0;
-      left: 0;
-      display: none;
-      z-index: 9998;
-      backdrop-filter: blur(10px);
-  }
-  .modal {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-      display: none;	
-      height: fit-content;
-      width: 80%;
-      background-color: #fff;
-      box-sizing: border-box;
-      z-index: 9999;
-  }
-  .modal > p {
-    padding: 15px;
-      margin: 0;
-  }
+input[type="checkbox"] {
+  -webkit-animation: fade-out 0.5s ease-out both;
+  animation: fade-out 0.5s ease-out both;
+  display: none;
+}
+input[type="checkbox"]:checked ~ .modal,
+input[type="checkbox"]:checked ~ .modal-background {
+  -webkit-animation: fade-in 0.5s ease-in both;
+  animation: fade-in 0.5s ease-in both;
+  display: block;
+}
+.modal-background {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 9998;
+  backdrop-filter: blur(10px);
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: none;
+  height: fit-content;
+  width: 80%;
+  background-color: #fff;
+  box-sizing: border-box;
+  z-index: 9999;
+}
+.modal > p {
+  padding: 15px;
+  margin: 0;
+}
 
 .book-info > span {
-    position: absolute;
-    margin: var(--mg-s);
-    padding: var(--pd-s);
-    top: 0;
-    right: 0;
+  position: absolute;
+  margin: var(--mg-s);
+  padding: var(--pd-s);
+  top: 0;
+  right: 0;
 }
 
 .book-info > span > label {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .book-info > img {
   float: left;
   margin: var(--mg-s);
-    width: calc(100% / 3 - 2 * var(--mg-s));
-    max-height: var(--h);
-    min-width: var(--w)
+  width: calc(100% / 3 - 2 * var(--mg-s));
+  max-height: var(--h);
+  min-width: var(--w);
 }
 
 .book-info .book-info-details {
-    padding: var(--pd-l);
+  padding: var(--pd-l);
 }
 
 .book-info-details > h2 {
-    text-align: left;
+  text-align: left;
 }
 
 .book-info-details > a {
-    margin-left: auto;
-    float: right;
-    margin: var(--mg-s);
+  margin-left: auto;
+  float: right;
+  margin: var(--mg-s);
 }
 
 .footer-div {
-    background-color: #333;
-    padding: calc(2 * var(--pd-l)) var(--pd-m);
+  background-color: #333;
+  padding: calc(2 * var(--pd-l)) var(--pd-m);
 }
 
-.footer-links, .footer-about {
-    float: left;
-    width: calc(100% / 2 - 2 * var(--mg-s));
-    margin: var(--mg-s);
+.footer-links,
+.footer-about {
+  float: left;
+  width: calc(100% / 2 - 2 * var(--mg-s));
+  margin: var(--mg-s);
 
-    color: var(--gray-1);
-    text-align: center;
-    text-transform: uppercase;
-    font-size: small;
-
+  color: var(--gray-1);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: small;
 }
 
-.footer-links > hr, .footer-about > hr {
-    width: 90%;
-    height: 0;
-    color: var(--gray-3);
-    background-color: var(--gray-3);
-    border: 1px solid rgba(0,0,0,.6);
+.footer-links > hr,
+.footer-about > hr {
+  width: 90%;
+  height: 0;
+  color: var(--gray-3);
+  background-color: var(--gray-3);
+  border: 1px solid rgba(0, 0, 0, 0.6);
 }
 
 .footer-links > a {
-    display: inline-block;
-    padding: var(--pd-s);
-    color: var(--gray-1);
-    text-decoration: none;
+  display: inline-block;
+  padding: var(--pd-s);
+  color: var(--gray-1);
+  text-decoration: none;
 }
 
 .footer-links > a:hover {
-    color: var(--pink);
-    cursor: pointer;
+  color: var(--pink);
+  cursor: pointer;
 }
 
-.footer-about > p{
-    margin: 0;
+.footer-about > p {
+  margin: 0;
 }
 
 /* The Overlay (background) */
 .overlay {
-    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
-    height: 100%;
-    width: 0;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    background-color: rgb(0,0,0); /* Black fallback color */
-    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
-  }
-  
-  /* Position the content inside the overlay */
-  .overlay-content {
-    position: relative;
-    top: 25%; /* 25% from the top */
-    width: 100%; /* 100% width */
-    text-align: center; /* Centered text/links */
-    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
-  }
-  
-  /* The navigation links inside the overlay */
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0); /* Black fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+  text-transform: uppercase;
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
   .overlay a {
-    padding: 8px;
-    font-size: 36px;
-    color: #818181;
-    display: block; /* Display block instead of inline */
-    transition: 0.3s; /* Transition effects on hover (color) */
-    text-transform: uppercase;
+    font-size: 20px;
   }
-  
-  /* When you mouse over the navigation links, change their color */
-  .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-  }
-  
-  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-  @media screen and (max-height: 450px) {
-    .overlay a {font-size: 20px}
-  }
+}
 
-  /* nav button */
-  .toggle-btn{
-    background-color: var(--gray-1);
-    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.2);
-    border-radius: 3.2rem;
-    padding: 0.8rem;
+/* nav button */
+.toggle-btn {
+  background-color: var(--gray-1);
+  box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 3.2rem;
+  padding: 0.8rem;
 
-    display:flex;
-    flex-direction:column;
-    width:50px;
-    cursor:pointer;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    float: right;
-    z-index: 1000;
-   }
-   
-   .toggle-btn span{
-     background: var(--pink);
-     border-radius:10px;
-     height:5px;
-     margin: 5px 0;
-     transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
-   }
-   
-   .toggle-btn span:nth-of-type(1){
-     width:50%;
-     
-   }
-   
-   .toggle-btn span:nth-of-type(2){
-     width:100%;
-   }
-   
-   
-   .toggle-btn span:nth-of-type(3){
-     width:75%;
-    
-   }
-   
-   
-   .toggle-btn input[type="checkbox"]{
-     display:none;
-   }
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  float: right;
+  z-index: 1000;
+}
 
-   .toggle-btn input[type="checkbox"]:checked ~ span {
-    margin: 5px -3px;
-   }
-   
-   
-   .toggle-btn input[type="checkbox"]:checked ~ span:nth-of-type(1){
-     transform-origin:bottom;
-     transform:rotatez(45deg) translate(7px,0px)
-   }
-   
-   
-   .toggle-btn input[type="checkbox"]:checked ~ span:nth-of-type(2){
-     
-     transform-origin:top;
-     transform:rotatez(-45deg)
-   }
-   
-   
-   .toggle-btn input[type="checkbox"]:checked ~ span:nth-of-type(3){
-     
-     transform-origin:bottom;
-     width:50%;
-     transform: rotatez(45deg) translate(10px, -21px);
-   
-   }
+.toggle-btn span {
+  background: var(--pink);
+  border-radius: 10px;
+  height: 5px;
+  margin: 5px 0;
+  transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked {
+  width: 100%;
+}
+
+input[type="checkbox"]:checked ~ .overlay {
+  width: 100%;
+}
+
+input[type="checkbox"]:checked + .toggle-btn span:nth-of-type(1) {
+  width: 50%;
+}
+
+input[type="checkbox"]:checked + .toggle-btn span:nth-of-type(2) {
+  width: 100%;
+}
+
+input[type="checkbox"]:checked + .toggle-btn span:nth-of-type(3) {
+  width: 75%;
+}
+
+input[type="checkbox"]:checked + .toggle-btn span {
+  margin: 5px -3px;
+}
+
+input[type="checkbox"]:checked + .toggle-btn span:nth-of-type(1) {
+  transform-origin: bottom;
+  transform: rotatez(45deg) translate(7px, 0px);
+}
+
+input[type="checkbox"]:checked + .toggle-btn span:nth-of-type(2) {
+  transform-origin: top;
+  transform: rotatez(-45deg);
+}
+
+input[type="checkbox"]:checked + .toggle-btn span:nth-of-type(3) {
+  transform-origin: bottom;
+  width: 50%;
+  transform: rotatez(45deg) translate(10px, -21px);
+}
+
+.overlay-content a:active{
+  visibility: hidden;
+}
