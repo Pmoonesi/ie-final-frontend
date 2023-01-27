@@ -529,6 +529,6 @@ input[type="checkbox"]:checked + .toggle-btn span:nth-of-type(3) {
   transform: rotatez(45deg) translate(10px, -21px);
 }
 
-.overlay-content a:active{
-  visibility: hidden;
+.overlay:target{
+  width: 0;
 }
